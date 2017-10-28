@@ -50,7 +50,7 @@ function message(ID, type, text) {
 
 				//	}
 			}
-			else if (step == "waitforaction") {
+			else if (step == "waitforactionwaitforaction") {
 				if(newtext.includes('community'))
 				{
 					yield facebook.sendQuickReply(ID,
