@@ -21,6 +21,7 @@ function message(ID, type, text) {
 		if (lango == null) {
 			yield db.Step(ID, 'lang', lang)
 		}
+		console.log("--->> : "+newtext)
 		if (type == "text" /*&& lango == "en"*/) {
 			if ((step == 'user' || step == 'new') && typeof NL.greeting != 'undefined') {
 				yield facebook.sendQuickReply(ID,
