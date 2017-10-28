@@ -112,8 +112,9 @@ function message(ID, type, text) {
 				}
 				else if(newtext.includes('home'))
 				{
-					message(ID,'text','Hi');
 					yield db.Step(ID, 'set', 'user')
+					message(ID,'text','Hi')
+					
 					
 				}
 				else
@@ -190,7 +191,11 @@ function message(ID, type, text) {
 				}
 				else if(newtext.includes('home'))
 				{
+					
+					yield db.Step(ID, 'set', 'user')
 					message(ID,'text','Hi')
+					
+					
 				}
 				else {
 					yield facebook.sendTextMessage(ID, "You have to reply with handyman to proceed or home to back!");
@@ -207,7 +212,10 @@ function message(ID, type, text) {
 				}
 				else if(newtext.includes('home'))
 				{
+					yield db.Step(ID, 'set', 'user')
 					message(ID,'text','Hi')
+					
+					
 				}
 				else {
 					yield facebook.sendTextMessage(ID, "You have to reply with a vaild date i.e 7/11/2017 or home to back !");
