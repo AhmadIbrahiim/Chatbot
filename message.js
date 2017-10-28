@@ -79,7 +79,7 @@ function message(ID, type, text) {
 						})
 						yield db.Step(ID,'set','waitforcomun');
 				}
-				else if(newtext.includes('complaint'))
+				else if(newtext.includes('complain'))
 				{
 					yield facebook.sendQuickReply(ID,
 						{
@@ -120,7 +120,7 @@ function message(ID, type, text) {
 				}
 				else
 				{
-					yield facebook.sendTextMessage(ID,"Please reply with *community* , *complaint* or *home* to back to proceed");
+					yield facebook.sendTextMessage(ID,"Please reply with *community* , *complain* or *home* to back to proceed");
 				}
 			}
 			else if(step=="waitforcomplaint")
