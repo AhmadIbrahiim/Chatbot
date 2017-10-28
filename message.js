@@ -224,7 +224,9 @@ function message(ID, type, text) {
 			}
 			else 
 			{
-				yield facebook.sendTextMessage(ID,"I'm Sorry but i cannot understand this ! you can type *Hi* to get started ")
+				yield facebook.sendTextMessage(ID,"I'm Sorry but i cannot understand this ! you can type *Hi* to get started ");
+				yield db.Step(ID, 'set', 'user');
+				
 			}
 
 		}
