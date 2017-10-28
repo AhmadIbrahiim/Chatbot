@@ -46,7 +46,7 @@ function message(ID, type, text) {
 						]
 
 					})
-				yield db.Step(ID, 'set', 'waitforaction')
+				yield db.Step(ID, 'set', 'waitforactionwaitforaction')
 
 				//	}
 			}
@@ -112,7 +112,9 @@ function message(ID, type, text) {
 				}
 				else if(newtext.includes('home'))
 				{
-					message(ID,'text','Hi')
+					message(ID,'text','Hi');
+					yield db.Step(ID, 'set', 'user')
+					
 				}
 				else
 				{
