@@ -178,7 +178,7 @@ function message(ID, type, text) {
 				if(newtext>0)
 				{
 					yield facebook.sendTextMessage(ID,"Thank you so much!");
-					yield db.Step(ID,'set','ratesurveryscond');
+					yield db.Step(ID,'set','user');
 				}
 				else{
 					
